@@ -6,6 +6,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN yum -y update; yum -y install git nmap epel-release tcpdump tshark
 RUN yum -y update; yum -y install python34 python34-pip net-tools mtr bind-utils; yum clean all
 RUN yum -y install http://software.internet2.edu/rpms/el7/x86_64/main/RPMS/perfSONAR-repo-0.8-1.noarch.rpm; yum -y install perfsonar-tools; yum clean all
-RUN yum -y update; yum -y install mtr-tiny
 RUN pip3 install speedtest-cli
 ENTRYPOINT ["/bin/bash"]
