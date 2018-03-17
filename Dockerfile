@@ -11,4 +11,5 @@ RUN mkdir -p /app/code/scapy
 WORKDIR /app/code
 RUN git clone https://github.com/phaethon/scapy.git /app/code/scapy
 RUN cd /app/code/scapy; python3 setup.py install
+RUN yum -y update
 ENTRYPOINT ["/bin/bash"]
