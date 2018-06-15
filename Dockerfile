@@ -14,4 +14,4 @@ RUN git clone https://github.com/phaethon/scapy.git /app/code/utils/scapy
 RUN cd /app/code/utils/scapy; python3 setup.py install
 RUN yum -y install https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/powershell-6.0.2-1.rhel.7.x86_64.rpm
 RUN yum -y update
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/usr/bin/pwsh"]
